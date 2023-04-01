@@ -1,0 +1,489 @@
+----------------------------------------------------------------------------------
+                          MULTIPROCESSING NOT SECURE
+----------------------------------------------------------------------------------
+# ab -r -n 1000 -c 10 -s 99999999 http://127.0.0.1:8889/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8889
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      10
+Time taken for tests:   709.486 seconds
+Complete requests:      1000
+Failed requests:        18
+   (Connect: 0, Receive: 6, Length: 6, Exceptions: 6)
+Total transferred:      146118 bytes
+HTML transferred:       34790 bytes
+Requests per second:    1.41 [#/sec] (mean)
+Time per request:       7094.864 [ms] (mean)
+Time per request:       709.486 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.20 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  883 2688.1      0   32447
+Processing:  1109 6071 15495.7   4602  225767
+Waiting:        0 4718 3758.1   4389  109485
+Total:       1109 6953 15738.2   5105  226784
+
+Percentage of the requests served within a certain time (ms)
+  50%   5105
+  66%   6039
+  75%   6753
+  80%   7306
+  90%   8909
+  95%  10854
+  98%  15258
+  99%  37259
+ 100%  226784 (longest request)
+
+----------------------------------------------------------------------------------
+# ab -r -n 1000 -c 50 -s 99999999 http://127.0.0.1:8889/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8889
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      50
+Time taken for tests:   517.197 seconds
+Complete requests:      1000
+Failed requests:        414
+   (Connect: 0, Receive: 138, Length: 138, Exceptions: 138)
+Total transferred:      128625 bytes
+HTML transferred:       30625 bytes
+Requests per second:    1.93 [#/sec] (mean)
+Time per request:       25859.840 [ms] (mean)
+Time per request:       517.197 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.24 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 2479 7393.5   1028   65079
+Processing:   453 20003 41780.0   4234  157689
+Waiting:        0 3804 4009.0   3618   82987
+Total:        454 22481 41868.7   5453  158729
+
+Percentage of the requests served within a certain time (ms)
+  50%   5453
+  66%   6918
+  75%   8912
+  80%  11880
+  90%  114732
+  95%  128000
+  98%  158727
+  99%  158728
+ 100%  158729 (longest request)
+
+----------------------------------------------------------------------------------
+# ab -r -n 1000 -c 100 -s 99999999 http://127.0.0.1:8889/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8889
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      100
+Time taken for tests:   217.649 seconds
+Complete requests:      1000
+Failed requests:        258
+   (Connect: 0, Receive: 86, Length: 86, Exceptions: 86)
+Total transferred:      134652 bytes
+HTML transferred:       32060 bytes
+Requests per second:    4.59 [#/sec] (mean)
+Time per request:       21764.878 [ms] (mean)
+Time per request:       217.649 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.60 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 1406 3778.4      0   65062
+Processing:   286 19561 58963.2   1700  215759
+Waiting:        0 1541 1153.8   1494   25646
+Total:        286 20968 58976.4   2365  216822
+
+Percentage of the requests served within a certain time (ms)
+  50%   2365
+  66%   3116
+  75%   4119
+  80%   4789
+  90%  17512
+  95%  216822
+  98%  216822
+  99%  216822
+ 100%  216822 (longest request)
+
+----------------------------------------------------------------------------------
+# ab -r -n 1000 -c 150 -s 99999999 http://127.0.0.1:8889/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8889
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      150
+Time taken for tests:   120.557 seconds
+Complete requests:      1000
+Failed requests:        396
+   (Connect: 0, Receive: 132, Length: 132, Exceptions: 132)
+Total transferred:      127596 bytes
+HTML transferred:       30380 bytes
+Requests per second:    8.29 [#/sec] (mean)
+Time per request:       18083.540 [ms] (mean)
+Time per request:       120.557 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.03 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  886 2162.0      0   32295
+Processing:    88 16949 40132.0   1022  119359
+Waiting:        0 1161 3776.6    818   59813
+Total:        130 17835 40256.7   1367  120398
+
+Percentage of the requests served within a certain time (ms)
+  50%   1367
+  66%   1979
+  75%   3067
+  80%   4418
+  90%  120397
+  95%  120397
+  98%  120398
+  99%  120398
+ 100%  120398 (longest request)
+
+----------------------------------------------------------------------------------
+# ab -r -n 1000 -c 200 -s 99999999 http://127.0.0.1:8889/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+Completed 600 requests
+Completed 700 requests
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8889
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      200
+Time taken for tests:   112.719 seconds
+Complete requests:      1000
+Failed requests:        537
+   (Connect: 0, Receive: 179, Length: 179, Exceptions: 179)
+Total transferred:      120687 bytes
+HTML transferred:       28735 bytes
+Requests per second:    8.87 [#/sec] (mean)
+Time per request:       22543.857 [ms] (mean)
+Time per request:       112.719 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.05 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0  452 777.9      0    7237
+Processing:     6 20436 42736.4    316  111678
+Waiting:        0  438 3086.2    166   55772
+Total:          7 20889 43018.8    363  112716
+
+Percentage of the requests served within a certain time (ms)
+  50%    363
+  66%   1297
+  75%   1740
+  80%   3604
+  90%  112713
+  95%  112715
+  98%  112715
+  99%  112716
+ 100%  112716 (longest request)
+
+
+----------------------------------------------------------------------------------
+                          MULTIPROCESSING SECURE
+----------------------------------------------------------------------------------
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   1683.330 seconds
+Complete requests:      1000
+Failed requests:        994
+   (Connect: 0, Receive: 0, Length: 982, Exceptions: 12)
+Total transferred:      144354 bytes
+HTML transferred:       34370 bytes
+Requests per second:    0.59 [#/sec] (mean)
+Time per request:       16833.295 [ms] (mean)
+Time per request:       1683.330 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.08 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 6610 9314.1   4275   70343
+Processing:   810 6675 16035.7   4309  133696
+Waiting:        0 4344 1674.3   4096   13853
+Total:       2713 13284 17729.1   8907  133696
+
+Percentage of the requests served within a certain time (ms)
+  50%   8907
+  66%  10513
+  75%  11727
+  80%  12964
+  90%  17476
+  95%  38489
+  98%  75536
+  99%  129932
+ 100%  133696 (longest request)
+
+----------------------------------------------------------------------------------
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      50
+Time taken for tests:   872.038 seconds
+Complete requests:      1000
+Failed requests:        837
+   (Connect: 0, Receive: 0, Length: 772, Exceptions: 65)
+Total transferred:      113484 bytes
+HTML transferred:       27020 bytes
+Requests per second:    1.15 [#/sec] (mean)
+Time per request:       43601.911 [ms] (mean)
+Time per request:       872.038 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 5677 10556.5   2875   69501
+Processing:   913 33723 58667.2   3285  209918
+Waiting:        0 2343 1403.1   2565    7024
+Total:       2137 39400 56609.5   7937  209918
+
+Percentage of the requests served within a certain time (ms)
+  50%   7937
+  66%  13367
+  75%  39179
+  80%  114683
+  90%  133118
+  95%  148476
+  98%  209918
+  99%  209918
+ 100%  209918 (longest request)
+
+----------------------------------------------------------------------------------
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      100
+Time taken for tests:   554.253 seconds
+Complete requests:      1000
+Failed requests:        762
+   (Connect: 0, Receive: 0, Length: 728, Exceptions: 34)
+Total transferred:      107016 bytes
+HTML transferred:       25480 bytes
+Requests per second:    1.80 [#/sec] (mean)
+Time per request:       55425.303 [ms] (mean)
+Time per request:       554.253 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.19 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 4572 10834.4   1679   94909
+Processing:   324 40540 63260.5   2429  158716
+Waiting:        0 1540 1077.1   1754    4585
+Total:       1104 45112 61391.9   5997  158716
+
+Percentage of the requests served within a certain time (ms)
+  50%   5997
+  66%  18719
+  75%  127105
+  80%  127111
+  90%  153597
+  95%  158715
+  98%  158715
+  99%  158715
+ 100%  158716 (longest request)
+
+----------------------------------------------------------------------------------
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      150
+Time taken for tests:   341.799 seconds
+Complete requests:      1000
+Failed requests:        688
+   (Connect: 0, Receive: 0, Length: 679, Exceptions: 9)
+Total transferred:      99813 bytes
+HTML transferred:       23765 bytes
+Requests per second:    2.93 [#/sec] (mean)
+Time per request:       51269.868 [ms] (mean)
+Time per request:       341.799 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.29 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 2807 6850.6   1072   66085
+Processing:   164 37762 52804.7   1860  134256
+Waiting:        0  992 848.6    999    3862
+Total:        834 40568 51299.8   5090  134256
+
+Percentage of the requests served within a certain time (ms)
+  50%   5090
+  66%  20345
+  75%  112646
+  80%  112652
+  90%  115677
+  95%  115681
+  98%  115684
+  99%  115685
+ 100%  134256 (longest request)
+
+----------------------------------------------------------------------------------
+Server Software:        myserver/1.0
+Server Hostname:        127.0.0.1
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      200
+Time taken for tests:   113.250 seconds
+Complete requests:      1000
+Failed requests:        818
+   (Connect: 0, Receive: 0, Length: 818, Exceptions: 0)
+Total transferred:      120246 bytes
+HTML transferred:       28630 bytes
+Requests per second:    8.83 [#/sec] (mean)
+Time per request:       22650.090 [ms] (mean)
+Time per request:       113.250 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.04 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 1191 4234.0    149   65028
+Processing:     1 20968 43544.2    452  113241
+Waiting:        0  347 343.5    250    1992
+Total:         10 22158 43191.5   1276  113241
+
+Percentage of the requests served within a certain time (ms)
+  50%   1276
+  66%   2140
+  75%   4184
+  80%  16280
+  90%  113233
+  95%  113237
+  98%  113240
+  99%  113240
+ 100%  113241 (longest request)
